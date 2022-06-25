@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Corruption_Mechante_boucle.mp3-6cf61f1949d4f0823daef5ed9bd79292.mp3str"
+
+[deps]
+
+source_file="res://Assets/music/Corruption_Mechante_boucle.mp3"
+dest_files=[ "res://.import/Corruption_Mechante_boucle.mp3-6cf61f1949d4f0823daef5ed9bd79292.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
