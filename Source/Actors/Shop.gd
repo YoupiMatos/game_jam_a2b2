@@ -23,6 +23,7 @@ func _process(delta):
 
 func _on_Shop_body_entered(body):
 	if body.is_in_group("player"):
+<<<<<<< HEAD
 		if dialogue.percent_visible != 1:
 			anim_player.play("dialogue")
 		player_is_near = true
@@ -31,3 +32,8 @@ func _on_Shop_body_entered(body):
 func _on_Shop_body_exited(body):
 	if body.is_in_group("player"):
 		player_is_near = false
+=======
+		anim_player.play("dialogue")
+		if Input.is_action_just_pressed("accept"):
+			Autoload.level_1_corrupted = true
+>>>>>>> origin/david
