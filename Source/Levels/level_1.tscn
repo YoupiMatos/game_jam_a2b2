@@ -134,7 +134,7 @@ text = "If you're struggling, try out this weed killer.
 The effect is guaranteed..."
 
 [node name="Player" parent="." instance=ExtResource( 7 )]
-position = Vector2( 464, 392 )
+position = Vector2( 488, 400 )
 
 [node name="ChangeScene" parent="." instance=ExtResource( 1 )]
 position = Vector2( 5016, -184 )

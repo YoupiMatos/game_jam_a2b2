@@ -91,21 +91,21 @@ height = 34.0
 [node name="BlueFish" type="Node2D"]
 script = ExtResource( 2 )
 
-[node name="BlueFish" type="Area2D" parent="."]
-position = Vector2( -19.9749, 10 )
-rotation = 1.31821
+[node name="Fish" type="Area2D" parent="."]
+position = Vector2( 0, -103.65 )
+rotation = 2.01004
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="BlueFish"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Fish"]
 autoplay = "jump"
 anims/die = SubResource( 3 )
 anims/jump = SubResource( 2 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BlueFish"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fish"]
 shape = SubResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="BlueFish"]
+[node name="Sprite" type="Sprite" parent="Fish"]
 texture = ExtResource( 1 )
 hframes = 2
 
 [connection signal="ready" from="." to="." method="_on_Fish_ready"]
-[connection signal="body_entered" from="BlueFish" to="." method="_on_Fish_body_entered"]
+[connection signal="body_entered" from="Fish" to="." method="_on_Fish_body_entered"]

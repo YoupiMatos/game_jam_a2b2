@@ -30,8 +30,6 @@ func _state_logic(delta):
 	if state== states.wall_slide:
 		parent._cap_gravity_wall_slide()
 	parent._apply_movement()
-	if state != null:
-		label.text = states.keys()[state]
 
 func _get_transition(delta):
 	match state:
@@ -85,15 +83,12 @@ func _enter_state(new_state, old_state):
 		states.run:
 			parent.anim_player.play("run")
 		states.jump:
-			pass
-			#parent.anim_player.play("jump")
+			parent.anim_player.play("jump")
 		states.fall:
-			pass
-			#parent.anim_player.play("fall")
+			parent.anim_player.play("fall")
 		states.wall_slide:
-			pass
-			#parent.anim_player.play("wall_slide")
-			#parent.body.scale.x = -parent.wall_direction
+			parent.anim_player.play("wall_slide")
+			parent.sprites.scale.x = - parent.wall_direction
 
 func _exit_state(old_state, new_state):
 	pass

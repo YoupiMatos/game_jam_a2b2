@@ -40,7 +40,7 @@ func _update_move_direction():
 
 func _handle_move_input():
 	velocity.x = lerp(velocity.x, move_speed * move_direction, _get_h_weight())
-	if move_direction != 0:
+	if move_direction != 0 && wall_direction == 0:
 		sprites.scale.x = move_direction
 
 func _check_is_grounded():

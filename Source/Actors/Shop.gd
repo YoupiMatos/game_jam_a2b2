@@ -21,6 +21,8 @@ func _process(delta):
 			match level_name:
 				"level_1":
 					dialogue.text = "Already killing stuff? That was fast."
+				"level_2":
+					dialogue.text = "The only problem is we can't eat them anymore."
 
 
 func _on_Shop_body_entered(body):
@@ -35,6 +37,7 @@ func _on_Shop_body_entered(body):
 func _on_Shop_body_exited(body):
 	if body.is_in_group("player"):
 		player_is_near = false
-		anim_player.play("dialogue")
+		if !anim_player.current_animation == "dialogue":
+			anim_player.play("dialogue")
 		if Input.is_action_just_pressed("accept"):
 			Autoload.level_1_corrupted = true
