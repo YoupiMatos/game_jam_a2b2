@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Assets/ennemies/poisson_bleu-sheet.png" type="Texture" id=1]
+[ext_resource path="res://Assets/ennemies/POISSOn_rouge_et_blanc-sheet.png" type="Texture" id=1]
 [ext_resource path="res://Source/Actors/Fish.gd" type="Script" id=2]
 
 [sub_resource type="Animation" id=3]
@@ -88,25 +88,24 @@ tracks/2/keys = {
 radius = 12.0
 height = 34.0
 
-[node name="BlueFish" type="Node2D"]
+[node name="RedAndWhite" type="Node2D"]
 script = ExtResource( 2 )
 
-[node name="BlueFish" type="Area2D" parent="."]
-position = Vector2( 0, -7.97324 )
+[node name="Fish" type="Area2D" parent="."]
 rotation = 1.5708
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="BlueFish"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Fish"]
 autoplay = "jump"
 anims/die = SubResource( 3 )
 anims/jump = SubResource( 2 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BlueFish"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fish"]
 shape = SubResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="BlueFish"]
+[node name="Sprite" type="Sprite" parent="Fish"]
 texture = ExtResource( 1 )
 hframes = 2
 frame = 1
 
 [connection signal="ready" from="." to="." method="_on_Fish_ready"]
-[connection signal="body_entered" from="BlueFish" to="." method="_on_Fish_body_entered"]
+[connection signal="body_entered" from="Fish" to="." method="_on_Fish_body_entered"]
