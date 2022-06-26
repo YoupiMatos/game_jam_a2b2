@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Assets/pnj/groop.png" type="Texture" id=1]
+[ext_resource path="res://Source/Actors/Groop.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 76, 96 )
@@ -22,7 +23,24 @@ tracks/0/keys = {
 "values": [ 0, 51 ]
 }
 
+[sub_resource type="Animation" id=3]
+resource_name = "dialogue"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
 [node name="Area2D" type="Area2D"]
+script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -12, 32 )
@@ -35,3 +53,16 @@ hframes = 52
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "anim"
 anims/anim = SubResource( 1 )
+anims/dialogue = SubResource( 3 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -56.0
+margin_top = -88.0
+margin_right = 38.0
+margin_bottom = -74.0
+grow_horizontal = 2
+grow_vertical = 2
+percent_visible = 0.0
+
+[connection signal="body_entered" from="." to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_Area2D_body_exited"]
