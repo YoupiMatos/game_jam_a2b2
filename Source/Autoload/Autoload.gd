@@ -3,6 +3,7 @@ extends Node
 var level_1_corrupted = false
 var level_2_corrupted = false
 var corruptions = 0
+var has_magic_boots = false
 
 func corrupt_level(level_name):
 	match level_name:

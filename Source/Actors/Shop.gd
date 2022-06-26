@@ -18,7 +18,9 @@ func _process(delta):
 		if !Autoload.is_level_corrupted(level_name):
 			Autoload.corrupt_level(level_name)
 			Autoload.corruptions += 1
-			print(level_name)
+			match level_name:
+				"level_1":
+					dialogue.text = "Already killing stuff? That was fast."
 
 
 func _on_Shop_body_entered(body):
