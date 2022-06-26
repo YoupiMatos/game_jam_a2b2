@@ -1,6 +1,5 @@
-extends Area2D
+extends Node
 
-export var next_level: PackedScene
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -15,9 +14,3 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-
-
-func _on_Area2D_body_entered(body):
-	if body.is_in_group("player"):
-		$AudioStreamPlayer2D.play
-		get_tree().change_scene_to(next_level)

@@ -6,6 +6,7 @@ var player: Node
 var speed= 150
 var gravity = 1500
 var velocity = Vector2()
+onready var sprite = $Sprite
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -17,7 +18,9 @@ func _process(delta):
 	
 	velocity.y = gravity * delta
 	velocity.x = global_position.direction_to(player.global_position).x * 100
-	
+	if velocity.x > 0:
+		sprite.flip_h = true
+	else: sprite.flip_h = false
 	move_and_slide(velocity * speed * delta)
 
 
