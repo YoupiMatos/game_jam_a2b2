@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/poisson_bleu_mort.png-b72ea090c88ca4213d14e12e4e89bd54.stex"
+path="res://.import/POISSOn_rouge_et_blanc-sheet.png-d8464f1236aa90fc8ce989d75aacb9ee.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ennemies/poisson_bleu_mort.png"
-dest_files=[ "res://.import/poisson_bleu_mort.png-b72ea090c88ca4213d14e12e4e89bd54.stex" ]
+source_file="res://Assets/ennemies/POISSOn_rouge_et_blanc-sheet.png"
+dest_files=[ "res://.import/POISSOn_rouge_et_blanc-sheet.png-d8464f1236aa90fc8ce989d75aacb9ee.stex" ]
 
 [params]
 

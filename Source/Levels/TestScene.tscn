@@ -130,6 +130,6 @@ text = "If you're struggling, try out this weed killer.
 The effect is guaranteed..."
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 3595, -312 )
+position = Vector2( 496, 376 )
 
 [editable path="TileMap/Shop"]
