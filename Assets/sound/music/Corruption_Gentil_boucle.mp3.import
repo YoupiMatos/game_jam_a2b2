@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Corruption_Gentil_boucle.mp3-d49c3429bd1f362b09551d054df27ab2.mp3str"
+
+[deps]
+
+source_file="res://Assets/sound/music/Corruption_Gentil_boucle.mp3"
+dest_files=[ "res://.import/Corruption_Gentil_boucle.mp3-d49c3429bd1f362b09551d054df27ab2.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

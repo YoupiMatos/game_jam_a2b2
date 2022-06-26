@@ -302,12 +302,14 @@ scale = Vector2( 0.480567, 0.3596 )
 
 [node name="Area2D" parent="Ennemies/Archer" instance=ExtResource( 7 )]
 position = Vector2( 1813, 641 )
+scale = Vector2( -1, 1 )
 
 [node name="Area2D2" parent="Ennemies/Archer" instance=ExtResource( 7 )]
 position = Vector2( 2926, 451 )
 
 [node name="Area2D4" parent="Ennemies/Archer" instance=ExtResource( 7 )]
 position = Vector2( 1237, -69 )
+scale = Vector2( -1, 1 )
 
 [node name="Scies" type="Node" parent="Ennemies"]
 

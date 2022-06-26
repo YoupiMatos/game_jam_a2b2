@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Source/Actors/Player.gd" type="Script" id=1]
 [ext_resource path="res://Assets/pp/pp_spritesheet.png" type="Texture" id=2]
 [ext_resource path="res://Source/Actors/PlayerSM.gd" type="Script" id=3]
+[ext_resource path="res://Assets/sound/Jump.mp3" type="AudioStream" id=4]
 
 [sub_resource type="Animation" id=6]
 resource_name = "fall"
@@ -101,7 +102,7 @@ script = ExtResource( 1 )
 position = Vector2( 1, 4 )
 texture = ExtResource( 2 )
 hframes = 8
-frame = 7
+frame = 5
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 0, 5 )
@@ -158,3 +159,6 @@ shape = SubResource( 4 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 1.5, 11.5 )
 shape = SubResource( 5 )
+
+[node name="jump" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )

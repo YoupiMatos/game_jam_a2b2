@@ -19,3 +19,8 @@ func _process(delta):
 	velocity.x = global_position.direction_to(player.global_position).x * 100
 	
 	move_and_slide(velocity * speed * delta)
+
+
+func _on_Area2D_body_entered(body):
+	if body.is_in_group("player"):
+		get_tree().reload_current_scene()

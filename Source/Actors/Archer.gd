@@ -3,6 +3,7 @@ extends Area2D
 
 # Declare member variables here. Examples:
 onready var anim_player = $AnimationPlayer
+onready var sound = $AudioStreamPlayer2D
 var timer:Timer = Timer.new()
 const arrow = preload("res://Source/Actors/Arrow.tscn")
 
@@ -28,4 +29,5 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 	else:
 		arrow_instance.apply_impulse(Vector2.LEFT, Vector2(-1250, 0))
 	self.add_child(arrow_instance)
+	sound.play()
 	timer.start()

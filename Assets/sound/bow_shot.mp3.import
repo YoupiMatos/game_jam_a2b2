@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/bow_shot.mp3-98a07b309fd71f1098aa0a7da20652c1.mp3str"
+
+[deps]
+
+source_file="res://Assets/sound/bow_shot.mp3"
+dest_files=[ "res://.import/bow_shot.mp3-98a07b309fd71f1098aa0a7da20652c1.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

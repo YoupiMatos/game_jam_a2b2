@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Mistery Theme v1.wav-ec420362bb5da9d31a7b22416d4ba9d9.sample"
+
+[deps]
+
+source_file="res://Assets/sound/music/Mistery Theme v1.wav"
+dest_files=[ "res://.import/Mistery Theme v1.wav-ec420362bb5da9d31a7b22416d4ba9d9.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

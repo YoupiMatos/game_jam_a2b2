@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Assets/music/Corruption_Gentil_boucle.mp3" type="AudioStream" id=1]
+[ext_resource path="res://Assets/sound/music/Corruption_Gentil_boucle.mp3" type="AudioStream" id=1]
 
 [node name="Node" type="Node"]
 

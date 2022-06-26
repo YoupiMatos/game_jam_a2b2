@@ -18,6 +18,7 @@ onready var anim_player = $AnimationPlayer
 onready var raycasts = $Raycasts
 onready var left_wj_timer = $WallJumpTimers/LeftTimer
 onready var right_wj_timer = $WallJumpTimers/RightTimer
+onready var jump_sound = $jump
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

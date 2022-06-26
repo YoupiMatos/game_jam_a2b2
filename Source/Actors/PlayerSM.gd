@@ -1,6 +1,6 @@
 extends StateMachine
 
-onready var label = $Label
+
 
 func _ready():
 	add_state("idle")
@@ -13,12 +13,14 @@ func _ready():
 func _input(event):
 	if [states.idle, states.run].has(state):
 		if event.is_action_pressed("jump") && parent.is_on_floor():
+			parent.jump_sound.play()
 			parent.velocity.y = parent.jump_velocity
 	if state == states.jump:
 		if event.is_action_released("jump") && parent.velocity.y < parent.min_jump_velocity:
 			parent.velocity.y = parent.min_jump_velocity
 	elif state == states.wall_slide:
 		if event.is_action_pressed("jump"):
+			parent.jump_sound.play()
 			parent.wall_jump()
 			parent.begin_timer(parent.wall_direction)
 

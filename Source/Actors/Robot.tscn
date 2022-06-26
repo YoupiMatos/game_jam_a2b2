@@ -36,12 +36,12 @@ tracks/0/keys = {
 "values": [ 8 ]
 }
 
-[sub_resource type="CapsuleShape2D" id=3]
-radius = 7.99999
-height = 304.0
-
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 80.5, 84.5 )
+
+[sub_resource type="CapsuleShape2D" id=5]
+radius = 8.0
+height = 292.0
 
 [node name="Robot" type="KinematicBody2D"]
 position = Vector2( -108, -109 )
@@ -52,11 +52,6 @@ autoplay = "Idle"
 anims/Idle = SubResource( 1 )
 anims/die = SubResource( 2 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 43, 68 )
-rotation = 1.5708
-shape = SubResource( 3 )
-
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 96, 70 )
 texture = ExtResource( 2 )
@@ -65,3 +60,12 @@ hframes = 9
 [node name="floor check" type="CollisionShape2D" parent="."]
 position = Vector2( 64.5, 160.5 )
 shape = SubResource( 4 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 45, 69 )
+rotation = 1.5708
+shape = SubResource( 5 )
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
