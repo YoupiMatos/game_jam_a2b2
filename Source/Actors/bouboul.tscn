@@ -63,7 +63,8 @@ margin_bottom = -27.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "The devil will speak to you.
-Should you wish, you can accept his offers with the enter key."
+Should you wish, you can accept his offers with the enter key.
+Or the Y button."
 percent_visible = 0.0
 
 [connection signal="body_entered" from="." to="." method="_on_Area2D_body_entered"]

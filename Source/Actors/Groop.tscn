@@ -49,6 +49,7 @@ shape = SubResource( 2 )
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
 hframes = 52
+frame = 50
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "anim"

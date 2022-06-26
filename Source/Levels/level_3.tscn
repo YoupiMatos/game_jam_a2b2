@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Source/Actors/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Source/Tilemaps/TilemapDonjon.tscn" type="PackedScene" id=2]
@@ -13,6 +13,21 @@
 [ext_resource path="res://Source/Actors/PlanteSol.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Source/Actors/vague.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Source/Actors/Torche.tscn" type="PackedScene" id=13]
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
 
 [node name="Node2D" type="Node2D"]
 
@@ -86,14 +101,14 @@ position = Vector2( 3728, 111 )
 scale = Vector2( 2.56677, 2.30104 )
 
 [node name="SpriteVague9" parent="Archi/Vagues" instance=ExtResource( 12 )]
-position = Vector2( 4146, 255 )
+position = Vector2( 4146, 113 )
 scale = Vector2( 2.56677, 2.30104 )
 
 [node name="Shop" parent="." instance=ExtResource( 5 )]
 position = Vector2( 872, 442 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 473, 535 )
+position = Vector2( 4353, -429 )
 
 [node name="TileMap" parent="." instance=ExtResource( 2 )]
 position = Vector2( 176, 344 )
@@ -106,7 +121,14 @@ position = Vector2( 2700, -227 )
 rotation = -1.53065
 
 [node name="Area2D5" parent="TileMap/Ennemies" instance=ExtResource( 6 )]
-position = Vector2( 4144, -168 )
+position = Vector2( 4144, -135 )
+
+[node name="scie" parent="TileMap/Ennemies/Area2D5" index="0"]
+position = Vector2( 0, 0 )
+is_static = true
+
+[node name="AnimationPlayer" parent="TileMap/Ennemies/Area2D5/scie" index="2"]
+anims/RESET = SubResource( 1 )
 
 [node name="PlanteSol2" parent="TileMap/Ennemies" instance=ExtResource( 11 )]
 position = Vector2( 3490, -393 )
@@ -124,16 +146,16 @@ position = Vector2( 4174, 225 )
 position = Vector2( 4005, 215 )
 
 [node name="Area2D3" parent="TileMap/Ennemies" instance=ExtResource( 6 )]
-position = Vector2( 3018, -39 )
+position = Vector2( 3002, -8 )
 
 [node name="Area2D2" parent="TileMap/Ennemies" instance=ExtResource( 6 )]
-position = Vector2( 2602, -39 )
+position = Vector2( 2586, -8 )
 
 [node name="Area2D" parent="TileMap/Ennemies" instance=ExtResource( 6 )]
-position = Vector2( 1968, 600 )
+position = Vector2( 1944, 634 )
 
 [node name="Area2D4" parent="TileMap/Ennemies" instance=ExtResource( 6 )]
-position = Vector2( 3456, -38 )
+position = Vector2( 3440, -7 )
 
 [node name="RedFish3" parent="TileMap/Ennemies" instance=ExtResource( 7 )]
 position = Vector2( 1469, -235 )
@@ -148,7 +170,10 @@ position = Vector2( 1944, -228 )
 position = Vector2( 1782, -240 )
 
 [node name="Area2D6" parent="TileMap/Ennemies" instance=ExtResource( 6 )]
-position = Vector2( 2558, -296 )
+position = Vector2( 2500, -264 )
+
+[node name="scie" parent="TileMap/Ennemies/Area2D6" index="0"]
+is_static = true
 
 [node name="PlanteSol" parent="TileMap/Ennemies" instance=ExtResource( 11 )]
 position = Vector2( 3610, -388 )
@@ -182,3 +207,6 @@ position = Vector2( 4842, -130 )
 
 [node name="Torche7" parent="Torche" instance=ExtResource( 13 )]
 position = Vector2( 1452, -346 )
+
+[editable path="TileMap/Ennemies/Area2D5"]
+[editable path="TileMap/Ennemies/Area2D6"]
