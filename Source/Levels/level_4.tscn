@@ -78,5 +78,5 @@ texture = ExtResource( 5 )
 [node name="Ennemies" type="Node" parent="."]
 
 [node name="Robot" parent="Ennemies" instance=ExtResource( 6 )]
-position = Vector2( 1407, 575 )
+position = Vector2( 1376, 509 )
 scale = Vector2( 0.480567, 0.3596 )
