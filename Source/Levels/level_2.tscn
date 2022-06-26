@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Source/Tilemaps/TilemapDonjon.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Source/Actors/PlantePlafond.tscn" type="PackedScene" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://Source/Levels/ChangeLevel.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Source/Actors/Barkmout.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Assets/bg/donjon_sdb_notag.png" type="Texture" id=15]
+[ext_resource path="res://Assets/bg/fond chateau nuit étoilé.png" type="Texture" id=16]
 
 [node name="level_2" type="Node2D"]
 position = Vector2( 24, 496 )
@@ -42,7 +43,7 @@ text = "If the fish are annoying you,
 just pour this in the tanks."
 
 [node name="Player" parent="TileMap" instance=ExtResource( 5 )]
-position = Vector2( -441, -887 )
+position = Vector2( 1544, -1692 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -1
@@ -60,14 +61,14 @@ margin_left = 40.0
 margin_top = -562.0
 margin_right = 2600.0
 margin_bottom = 158.0
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="TextureRect2" type="TextureRect" parent="CanvasLayer/Fond dj"]
 margin_left = 40.0
 margin_top = -1080.0
 margin_right = 2600.0
 margin_bottom = -360.0
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 flip_h = true
 flip_v = true
 
@@ -76,14 +77,14 @@ margin_left = 2560.0
 margin_top = -562.0
 margin_right = 5120.0
 margin_bottom = 158.0
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="TextureRect4" type="TextureRect" parent="CanvasLayer/Fond dj"]
 margin_left = 2560.0
 margin_top = -1080.0
 margin_right = 5120.0
 margin_bottom = -360.0
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 flip_h = true
 flip_v = true
 
@@ -92,14 +93,41 @@ margin_left = 5112.0
 margin_top = -576.0
 margin_right = 7672.0
 margin_bottom = 144.0
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="TextureRect7" type="TextureRect" parent="CanvasLayer/Fond dj"]
 margin_left = 5120.0
 margin_top = -1080.0
 margin_right = 7680.0
 margin_bottom = -360.0
+texture = ExtResource( 16 )
+flip_h = true
+flip_v = true
+
+[node name="TextureRect6" type="TextureRect" parent="CanvasLayer/Fond dj"]
+margin_left = 75.0
+margin_top = -1793.0
+margin_right = 2635.0
+margin_bottom = -1073.0
 texture = ExtResource( 4 )
+flip_h = true
+flip_v = true
+
+[node name="TextureRect8" type="TextureRect" parent="CanvasLayer/Fond dj"]
+margin_left = 2595.0
+margin_top = -1793.0
+margin_right = 5155.0
+margin_bottom = -1073.0
+texture = ExtResource( 16 )
+flip_h = true
+flip_v = true
+
+[node name="TextureRect9" type="TextureRect" parent="CanvasLayer/Fond dj"]
+margin_left = 5155.0
+margin_top = -1793.0
+margin_right = 7715.0
+margin_bottom = -1073.0
+texture = ExtResource( 16 )
 flip_h = true
 flip_v = true
 
@@ -159,19 +187,19 @@ flip_h = true
 [node name="Vagues" type="Node2D" parent="CanvasLayer"]
 
 [node name="SpriteVague" parent="CanvasLayer/Vagues" instance=ExtResource( 8 )]
-position = Vector2( 1912, 544 )
+position = Vector2( 1912, 572 )
 scale = Vector2( 5, 1 )
 
 [node name="SpriteVague2" parent="CanvasLayer/Vagues" instance=ExtResource( 8 )]
-position = Vector2( 1912, 568 )
+position = Vector2( 1912, 596 )
 scale = Vector2( 5, 1 )
 
 [node name="SpriteVague3" parent="CanvasLayer/Vagues" instance=ExtResource( 8 )]
-position = Vector2( 1920, 584 )
+position = Vector2( 1920, 612 )
 scale = Vector2( 5, 1 )
 
 [node name="SpriteVague4" parent="CanvasLayer/Vagues" instance=ExtResource( 8 )]
-position = Vector2( 1920, 608 )
+position = Vector2( 1920, 636 )
 scale = Vector2( 5, 1 )
 
 [node name="SpriteVague8" parent="CanvasLayer/Vagues" instance=ExtResource( 8 )]
@@ -197,6 +225,18 @@ scale = Vector2( 3, 2 )
 [node name="SpriteVague7" parent="CanvasLayer/Vagues" instance=ExtResource( 8 )]
 position = Vector2( 1312, 504 )
 scale = Vector2( 3, 2 )
+
+[node name="SpriteVague11" parent="CanvasLayer/Vagues" instance=ExtResource( 8 )]
+position = Vector2( 2728, -264 )
+scale = Vector2( 8, 2 )
+
+[node name="SpriteVague12" parent="CanvasLayer/Vagues" instance=ExtResource( 8 )]
+position = Vector2( 2728, -304 )
+scale = Vector2( 8, 2 )
+
+[node name="SpriteVague13" parent="CanvasLayer/Vagues" instance=ExtResource( 8 )]
+position = Vector2( 2731, -202 )
+scale = Vector2( 8, 2 )
 
 [node name="monstres" type="Node2D" parent="CanvasLayer"]
 
@@ -308,7 +348,7 @@ position = Vector2( 3635, 637 )
 position = Vector2( 3059, -390 )
 
 [node name="PotionPoison" type="Sprite" parent="."]
-position = Vector2( 459, -193 )
+position = Vector2( 454, -190 )
 texture = ExtResource( 11 )
 
 [node name="Torche" type="Node" parent="."]
@@ -333,5 +373,8 @@ position = Vector2( 3950, 532 )
 
 [node name="Torche8" parent="Torche" instance=ExtResource( 10 )]
 position = Vector2( 4590, 219 )
+
+[node name="Torche9" parent="Torche" instance=ExtResource( 10 )]
+position = Vector2( 3950, 532 )
 
 [editable path="TileMap/Shop"]
