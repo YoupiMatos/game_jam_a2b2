@@ -13,9 +13,10 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Autoload.level_1_corrupted:
-		anim_player.play("die")
-		hitbox.disabled = true
+	if anim_player.current_animation == "idle":
+		if Autoload.level_1_corrupted:
+			anim_player.play("die")
+			hitbox.disabled = true
 
 
 func _on_Plante_body_entered(body):

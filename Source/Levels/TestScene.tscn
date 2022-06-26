@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Source/Actors/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Source/Tilemaps/TilemapDonjon.tscn" type="PackedScene" id=2]
@@ -7,11 +7,10 @@
 [ext_resource path="res://Source/Actors/PlantePlafond.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Source/Actors/PlanteSol.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Source/Actors/Shop.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Assets/music/Corruption_Mechante_boucle.mp3" type="AudioStream" id=8]
 [ext_resource path="res://Source/Actors/Groop.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Assets/bg/fond chateau nuit étoilé.png" type="Texture" id=10]
 
-[node name="Level1" type="Node2D"]
+[node name="level_1" type="Node2D"]
 
 [node name="Area2D" parent="." instance=ExtResource( 9 )]
 position = Vector2( 832, 352 )
@@ -110,9 +109,5 @@ The effect is guaranteed..."
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 440, 400 )
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 8 )
-autoplay = true
 
 [editable path="TileMap/Shop"]
